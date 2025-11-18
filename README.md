@@ -1,4 +1,4 @@
-# coupling Landing Page Template
+# Lead Check Page
 
 #### Repository klonen
 ```bash
