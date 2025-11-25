@@ -22,6 +22,10 @@ module.exports = {
       },
     },
     extend: {
+        fontFamily: {
+            sans: ["Outfit", "ui-sans-serif", "system-ui"],
+            heading: ["Outfit", "ui-sans-serif", "system-ui"],
+        },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
