@@ -24,7 +24,7 @@ const showSignup = ref(false)
           <span class="mr-2 text-primary">
             <Badge>Kostenlos</Badge>
           </span>
-          <span> Website-Check </span>
+          <span class="mr-2"> Website-Check </span>
         </Badge>
 
         <div
