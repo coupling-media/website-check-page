@@ -33,7 +33,7 @@ const showSignup = ref(false)
           <h1>
             Entdecken Sie das volle
             <span
-              class="text-transparent bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text"
+              class="text-transparent bg-gradient-to-b from-primary to-[#FFA14D] bg-clip-text"
               >Potenzial
             </span>
             Ihrer Internetseite.

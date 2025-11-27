@@ -17,15 +17,12 @@ import {
   Sheet,
   SheetContent,
   SheetFooter,
-  SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
-import { ChevronsDown, Menu } from "lucide-vue-next";
 import ToggleTheme from "./ToggleTheme.vue";
 import MainLogo from "@/components/ui/navigation-menu/MainLogo.vue";
 
@@ -81,9 +78,7 @@ const isOpen = ref<boolean>(false);
 <template>
   <header
     :class="{
-      'shadow-light': mode === 'light',
-      'shadow-dark': mode === 'dark',
-      'w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border z-40 rounded-2xl flex justify-between items-center p-2 bg-card shadow-md': true,
+      'w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border z-40 rounded-2xl flex justify-between items-center p-2 bg-card': true,
     }"
   >
     <main-logo></main-logo>
@@ -102,19 +97,7 @@ const isOpen = ref<boolean>(false);
           class="flex flex-col justify-between rounded-tr-2xl rounded-br-2xl bg-card"
         >
           <div>
-            <SheetHeader class="mb-4 ml-4">
-              <SheetTitle class="flex items-center">
-                <a
-                  href="/"
-                  class="flex items-center"
-                >
-                  <ChevronsDown
-                    class="bg-gradient-to-tr from-primary/70 via-primary to-primary/70 rounded-lg size-9 mr-2 border text-white"
-                  />
-                  ShadcnVue
-                </a>
-              </SheetTitle>
-            </SheetHeader>
+
 
             <div class="flex flex-col gap-2">
               <Button
