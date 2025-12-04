@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/card";
 
 import { Check } from "lucide-vue-next";
+import {Badge} from "@/components/ui/badge";
 
 enum PopularPlan {
   NO = 0,
@@ -27,48 +28,51 @@ interface PlanProps {
 
 const plans: PlanProps[] = [
   {
-    title: "Premium",
+    title: "SEO und SEA Optimierung",
     popular: 0,
-    price: 45,
+    price: 599,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Get starterd",
+      "Für Unternehmen, die gezielt ihre Sichtbarkeit und Werbekosten verbessern wollen.",
+    buttonText: "Optimierung anfragen",
     benefitList: [
-      "4 team member",
-      "8 GB storage",
-      "Upto 6 pages",
-      "Priority support",
-      "AI assistance",
+      "Technische SEO-Analyse",
+      "Keyword- & Wettbewerbsanalyse",
+      "Meta-Daten & Content-Struktur",
+      "Google-Ads-Audit & Kampagnenoptimierung",
+      "Budgeteffizienz & Zielgruppen-Check",
+      "Individueller Maßnahmenplan"
     ],
   },
   {
-    title: "Free",
+    title: "Kostenloser Website-Check",
     popular: 1,
     price: 0,
     description:
-        "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Start Free Trial",
+        "Erhalten Sie einen schnellen, transparenten Überblick über den Status Ihrer Website.",
+    buttonText: "Jetzt kostenlos überprüfen lassen",
     benefitList: [
-      "1 team member",
-      "1 GB storage",
-      "Upto 2 pages",
-      "Community support",
-      "AI assistance",
+    "Sichtbarkeitsanalyse (SEO-Grundwerte)",
+      "Erste SEA-Potentialeinschätzung",
+      "UX & Design-Check",
+      "Barrierefreiheits-Bewertung",
+      "Auffällige optische & strukturelle Fehler",
+      "Kurzreport mit Prioritäten"
     ],
   },
   {
-    title: "Enterprise",
+    title: "Komplette Web-Optimierung",
     popular: 0,
-    price: 120,
+    price: 1999,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Contact US",
+      "Die ganzheitliche Lösung für maximale Performance in Technik, Design und Conversion.",
+    buttonText: "Projekt starten",
     benefitList: [
-      "10 team member",
-      "20 GB storage",
-      "Upto 10 pages",
-      "Phone & email support",
-      "AI assistance",
+      "Vollständiges Technik-Audit (Core Web Vitals, Struktur, Fehlerquellen)",
+      "UX- & Conversion-Analyse",
+      "Content-Optimierung & Seitenarchitektur",
+      "Performance-Check & Ladezeitverbesserung",
+      "SEO + SEA + Tracking-Optimierung",
+      "Individuelle Strategie inkl. Roadmap & Workshop"
     ],
   },
 ];
@@ -81,13 +85,13 @@ const plans: PlanProps[] = [
     </h2>
 
     <h2 class="text-3xl md:text-4xl text-center font-bold mb-4">
-      Get unlimitted access
+      Für jeden die richtige Lösung
     </h2>
 
     <h3
       class="md:w-1/2 mx-auto text-xl text-center text-muted-foreground pb-14"
     >
-      Lorem ipsum dolor sit amet consectetur adipisicing reiciendis.
+      Damit Sie genau das bekommen was Ihr Unternehmen benötigt.
     </h3>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-4">
@@ -114,8 +118,8 @@ const plans: PlanProps[] = [
           <CardDescription class="pb-4">{{ description }}</CardDescription>
 
           <div>
+            <span class="text-muted-foreground">ab </span>
             <span class="text-3xl font-bold">${{ price }}</span>
-            <span class="text-muted-foreground"> /month</span>
           </div>
         </CardHeader>
 
@@ -140,6 +144,12 @@ const plans: PlanProps[] = [
             {{ buttonText }}
           </Button>
         </CardFooter>
+        <Badge
+            v-if="popular === PopularPlan.YES"
+            variant="secondary"
+            class="absolute -top-2 -right-3"
+        >Meistgebucht</Badge
+        >
       </Card>
     </div>
   </section>
