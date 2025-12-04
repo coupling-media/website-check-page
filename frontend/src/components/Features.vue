@@ -21,39 +21,39 @@ interface FeaturesProps {
 const featureList: FeaturesProps[] = [
   {
     icon: "tabletSmartphone",
-    title: "Mobile Friendly",
+    title: "Mobile Optimierung",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, consectetur.",
+      "Ihre Website wird auf allen Geräten geprüft - damit Nutzer unterwegs keine Barrieren erleben und Google Sie besser rankt.",
   },
   {
     icon: "badgeCheck",
-    title: "Social Proof",
+    title: "Klare Datenbasis",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Natus consectetur, odio ea accusamus aperiam.",
+      "Wir bieten Transparenz statt Vermutungen: Sie erhalten verständliche Auswertungen mit konkreten Handlungsempfehlungen.",
   },
   {
     icon: "goal",
-    title: "Targeted Content",
+    title: "Zielgerichtete Inhalte",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. odio ea accusamus aperiam.",
+      "Wir analysieren Struktur, Texte und Nutzerführung, damit Ihre Botschaften wirklich ankommen und Conversions steigen.",
   },
   {
     icon: "pictureInPicture",
-    title: "Strong Visuals",
+    title: "Visuelle Qualität",
     description:
-      "Lorem elit. A odio velit cum aliquam. Natus consectetur dolores, odio ea accusamus aperiam.",
+      "Design, Layout und Bildoptimierung im Detail geprüft - für einen professionellen Eindruck und kürzere Ladezeiten.",
   },
   {
     icon: "mousePointerClick",
-    title: "Clear CTA",
+    title: "Optimierte Call-to-Actions",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing. odio ea accusamus consectetur.",
+      "Wir bewerten Aufbau und Positionierung Ihrer CTAs, damit Besucher wissen, welchen nächsten Schritt sie gehen sollen.",
   },
   {
     icon: "newspaper",
-    title: "Clear Headline",
+    title: "Starke Struktur & Headlines",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur.",
+      "Ihre Seitenarchitektur und Überschriften werden auf Verständlichkeit, SEO-Relevanz und Nutzerintention ausgerichtet.",
   },
 ];
 
@@ -89,13 +89,11 @@ const iconMap: Record<
     </h2>
 
     <h2 class="text-3xl md:text-4xl text-center font-bold mb-4">
-      What Makes Us Different
+      Was uns einzigartig macht
     </h2>
 
     <h3 class="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem
-      fugiat, odit similique quasi sint reiciendis quidem iure veritatis optio
-      facere tenetur.
+      Ein Website-Check ist mehr als ein schneller Blick auf Design oder Keywords. Wir analysieren Ihre Seite ganzheitlich - datenbasiert, strukturiert und mit einem klaren Fokus auf echte Performance.
     </h3>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">

@@ -11,31 +11,31 @@ interface HowItWorksProps {
 
 const HowItWorksList: HowItWorksProps[] = [
   {
-    badgeTitle: "Contribute",
-    title: "Make a Difference with Every Contribution",
+    badgeTitle: "Anfrage",
+    title: "Website kostenlos anmelden",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem fugiat, quasi sint reiciendis quidem iure.",
+      "Sie senden uns Ihre Website-URL und ein paar Angaben zu Ihrem Unternehmen - der Check ist für Sie unverbindlich.",
     image: "roboto.png",
   },
   {
-    badgeTitle: "Discover",
-    title: "Create an Impact with Every Choice",
+    badgeTitle: "Analyse",
+    title: "Technik, SEO & UX prüfen",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem fugiat, sint reiciendis quidem iure veritatis optio facere tenetur.",
+      "Wir analysieren Performance, technische SEO, Inhalte und Nutzerführung und decken versteckte Bremsen Ihrer Website auf.",
     image: "runner.png",
   },
   {
-    badgeTitle: "Innovate",
-    title: "Make Every Action Count",
+    badgeTitle: "Insights",
+    title: "Ergebnisse transparent auswerten",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem fugiat, odit similique quasi sint.",
+      "Sie erhalten einen klar strukturierten Report mit Prioritäten, Quick-Wins und klaren Handlungsempfehlungen.",
     image: "pacheco.png",
   },
   {
-    badgeTitle: "Collaborate",
-    title: "Tackle this challenge together",
+    badgeTitle: "Umsetzung",
+    title: "Optimierungen gezielt realisieren",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem fugiat, quasi sint reiciendis quidem iure.",
+      "Auf Wunsch unterstützen wir Sie oder Ihr Team bei der Umsetzung - von schnellen Anpassungen bis zur umfassenden Optimierung.",
     image: "gamestation.png",
   },
 ];
@@ -52,7 +52,7 @@ const HowItWorksList: HowItWorksProps[] = [
       </h2>
 
       <h2 class="text-3xl md:text-4xl text-center font-bold">
-        Step-by-Step Process
+        Ihr Website-Check in 4 Schritten
       </h2>
     </div>
 

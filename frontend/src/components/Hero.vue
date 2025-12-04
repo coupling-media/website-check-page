@@ -41,7 +41,7 @@ const showSignup = ref(false)
         </div>
 
         <p class="max-w-screen-sm mx-auto text-xl text-muted-foreground">
-          Wir analysieren Ihre Leads kostenlos und zeigen Ihnen, wie viel Potenzial in Ihrem CRM steckt - datenbasiert, transparent und unverbindlich.
+          Wir analysieren Ihre Website und decken auf, wo Sie mehr Sichtbarkeit, mehr Leads und mehr Umsatz erzielen können.
         </p>
 
         <div class="space-y-4 md:space-y-0 md:space-x-4">

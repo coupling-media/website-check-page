@@ -2,6 +2,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 import {
+  Wrench,
   ChartColumnDecreasing,
   ScanSearch,
   Clock,
@@ -21,33 +22,34 @@ interface BenefitsProps {
 
 const benefitList: BenefitsProps[] = [
   {
-    icon: "clock",
-    title: "Zeitverlust",
+    icon: "wrench",
+    title: "Unentdeckte technische Fehler",
     description:
-      "...durch Kontaktversuche mit falschen oder nicht mehr aktiven Adressen",
+      "...die Ladezeiten verlängern und Rankings verschlechtern - ohne dass Sie es direkt sehen.",
   },
   {
     icon: "lineChart",
-    title: "Sinkende Conversion Rates",
+    title: "Schwache SEO-Performance",
     description:
-      "...die einen Erfolg vorgaukeln, obwohl die Datenbasis das eigentliche Problem ist.",
+      "...weil Suchmaschinen Ihre Seite schlechter bewerten und Sie dadurch weniger qualifizierte Besucher erreichen.",
   },
   {
     icon: "wallet",
-    title: "Versteckte Kosten",
+    title: "Ineffiziente Nutzerführung",
     description:
-      "...die entstehen, wenn fehlerhafte Leads Ihr Werbebudget unbemerkt belasten.",
+      "...die dafür sorgt, dass Besucher abspringen, bevor sie Kontakt aufnehmen oder konvertieren.",
   },
   {
     icon: "scanSearch",
-    title: "Fehlende Transparenz",
+    title: "Blindflug bei Optimierungen",
     description:
-      "...da Sie nicht erkennen können, welche Lead-Quellen wirklich Ergebnisse liefern.",
+      "...da Ihnen klare Daten fehlen, um zu verstehen, was funktioniert - und was Ihre Website wirklich kostet.",
   },
 ];
 
 const iconMap: Record<
   string,
+  | typeof Wrench
   | typeof ChartColumnDecreasing
   | typeof ScanSearch
   | typeof Clock
@@ -58,6 +60,7 @@ const iconMap: Record<
   | typeof LineChart
   | typeof Wallet
 > = {
+  wrench: Wrench,
   chartColumnDecreasing: ChartColumnDecreasing,
   scanSearch: ScanSearch,
   clock: Clock,
@@ -80,11 +83,10 @@ const iconMap: Record<
         <h2 class="text-lg text-primary mb-2 tracking-wider">Problem</h2>
 
         <h2 class="text-3xl md:text-4xl font-bold mb-4">
-          Warum Sie sich schlechte Leads nicht leisten sollten
+          Warum Sie sich eine unoptimierte Website nicht leisten sollten
         </h2>
-        <p class="text-xl text-muted-foreground mb-8">
-          Unqualifizierte, veraltete oder fehlerhafte Leads schaden nicht nur Ihrer Conversion Rate - sie verbrennen bares Geld. Die häufigsten Probleme:
-        </p>
+        <p class="text-l text-muted-foreground mb-8">
+          Technische Fehler, schwache Inhalte oder langsame Ladezeiten schaden Ihrer Sichtbarkeit und Conversion Rate. Sie kosten messbar Geld - die häufigsten Probleme:        </p>
       </div>
 
       <div class="grid lg:grid-cols-2 gap-4 w-full">

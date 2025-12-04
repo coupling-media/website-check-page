@@ -27,23 +27,8 @@ interface PlanProps {
 
 const plans: PlanProps[] = [
   {
-    title: "Free",
-    popular: 0,
-    price: 0,
-    description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Start Free Trial",
-    benefitList: [
-      "1 team member",
-      "1 GB storage",
-      "Upto 2 pages",
-      "Community support",
-      "AI assistance",
-    ],
-  },
-  {
     title: "Premium",
-    popular: 1,
+    popular: 0,
     price: 45,
     description:
       "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
@@ -53,6 +38,21 @@ const plans: PlanProps[] = [
       "8 GB storage",
       "Upto 6 pages",
       "Priority support",
+      "AI assistance",
+    ],
+  },
+  {
+    title: "Free",
+    popular: 1,
+    price: 0,
+    description:
+        "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
+    buttonText: "Start Free Trial",
+    benefitList: [
+      "1 team member",
+      "1 GB storage",
+      "Upto 2 pages",
+      "Community support",
       "AI assistance",
     ],
   },

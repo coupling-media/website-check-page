@@ -21,25 +21,25 @@ interface ServiceProps {
 
 const serviceList: ServiceProps[] = [
   {
-    title: "Custom Domain Integration",
+    title: "Technischer Website-Check",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit adipisicing.",
+      "Wir prüfen Ladezeiten, Core Web Vitals, Fehlerquellen und technische SEO-Bremsen Ihrer Seite im Detail.",
     pro: 0,
   },
   {
-    title: "Social Media Integrations",
+    title: "Content- & Struktur-Analyse",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, dicta.",
+      "Wir bewerten Texte, Navigation und Nutzerführung – damit Ihre Inhalte verständlich sind und Besucher gezielt leiten.",
     pro: 0,
   },
   {
-    title: "Email Marketing Integrations",
-    description: "Lorem dolor sit amet adipisicing.",
+    title: "Conversion-Potenzial Analyse",
+    description: "Wir identifizieren Schwachstellen in CTAs, Pagespeed, Layout und Funnel, die Conversions ausbremsen.",
     pro: 0,
   },
   {
-    title: "SEO Optimization",
-    description: "Lorem ipsum dolor sit amet consectetur.",
+    title: "SEO-Optimierung",
+    description: "Wir decken Ranking-Probleme auf, analysieren Keywords und zeigen, wie Sie langfristig bessere Sichtbarkeit erreichen.",
     pro: 1,
   },
 ];
@@ -55,11 +55,10 @@ const serviceList: ServiceProps[] = [
     </h2>
 
     <h2 class="text-3xl md:text-4xl text-center font-bold mb-4">
-      Grow Your Business
+      Verbessern Sie die Leistung Ihrer Website
     </h2>
     <h3 class="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
-      From marketing and sales to operations and strategy, we have the expertise
-      to help you achieve your goals.
+      Von technischer Analyse bis Content-Optimierung - wir liefern klare Einsichten und konkrete Maßnahmen, um Ihre Website erfolgreicher zu machen.
     </h3>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
 
