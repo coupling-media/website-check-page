@@ -10,6 +10,12 @@ import {
   PictureInPicture,
   MousePointerClick,
   Newspaper,
+  Wrench,
+  TimerReset,
+  CodeXml,
+  FilePenLine,
+  Proportions,
+  Search
 } from "lucide-vue-next";
 
 interface FeaturesProps {
@@ -20,40 +26,40 @@ interface FeaturesProps {
 
 const featureList: FeaturesProps[] = [
   {
-    icon: "tabletSmartphone",
-    title: "Mobile Optimierung",
+    icon: "wrench",
+    title: "Technische SEO-Grundlagen",
     description:
-      "Ihre Website wird auf allen Geräten geprüft - damit Nutzer unterwegs keine Barrieren erleben und Google Sie besser rankt.",
+      "Wir prüfen, ob Ihre Website für Suchmaschinen technisch sauber erreichbar und indexierbar ist.",
   },
   {
-    icon: "badgeCheck",
-    title: "Klare Datenbasis",
+    icon: "timerReset",
+    title: "Ladezeit & Performance",
     description:
-      "Wir bieten Transparenz statt Vermutungen: Sie erhalten verständliche Auswertungen mit konkreten Handlungsempfehlungen.",
+      "Analyse der Website-Geschwindigkeit als wichtiger Faktor für Nutzererlebnis und SEO.",
   },
   {
-    icon: "goal",
-    title: "Zielgerichtete Inhalte",
+    icon: "codeXml",
+    title: "OnPage-Struktur & Meta-Daten",
     description:
-      "Wir analysieren Struktur, Texte und Nutzerführung, damit Ihre Botschaften wirklich ankommen und Conversions steigen.",
+      "Bewertung der Seitenstruktur und der wichtigsten SEO-Elemente.",
   },
   {
-    icon: "pictureInPicture",
-    title: "Visuelle Qualität",
+    icon: "filePenLine",
+    title: "Content-Qualität & Verständlichkeit",
     description:
-      "Design, Layout und Bildoptimierung im Detail geprüft - für einen professionellen Eindruck und kürzere Ladezeiten.",
+      "Wir prüfen, ob Inhalte klar, relevant und suchmaschinenfreundlich aufgebaut sind.",
   },
   {
-    icon: "mousePointerClick",
-    title: "Optimierte Call-to-Actions",
+    icon: "proportions",
+    title: "Nutzerführung & User Experience",
     description:
-      "Wir bewerten Aufbau und Positionierung Ihrer CTAs, damit Besucher wissen, welchen nächsten Schritt sie gehen sollen.",
+      "Analyse, wie intuitiv Nutzer durch die Website geführt werden.",
   },
   {
-    icon: "newspaper",
-    title: "Starke Struktur & Headlines",
+    icon: "search",
+    title: "Sichtbarkeit & Grund-SEO-Status",
     description:
-      "Ihre Seitenarchitektur und Überschriften werden auf Verständlichkeit, SEO-Relevanz und Nutzerintention ausgerichtet.",
+      "Einordnung des aktuellen SEO-Status auf Basis von SISTRIX-Daten.",
   },
 ];
 
@@ -67,6 +73,12 @@ const iconMap: Record<
   | typeof MousePointerClick
   | typeof MessageCircle
   | typeof Newspaper
+  | typeof Wrench
+  | typeof TimerReset
+  | typeof CodeXml
+  | typeof FilePenLine
+  | typeof Proportions
+  | typeof Search
 > = {
   tabletSmartphone: TabletSmartphone,
   badgeCheck: BadgeCheck,
@@ -76,6 +88,12 @@ const iconMap: Record<
   mousePointerClick: MousePointerClick,
   messageCircle: MessageCircle,
   newspaper: Newspaper,
+  wrench: Wrench,
+  timerReset: TimerReset,
+  codeXml: CodeXml,
+  filePenLine: FilePenLine,
+  proportions: Proportions,
+  search: Search
 };
 </script>
 
@@ -85,15 +103,15 @@ const iconMap: Record<
     class="container py-24 sm:py-32"
   >
     <h2 class="text-lg text-primary text-center mb-2 tracking-wider">
-      Features
+      Analyse
     </h2>
 
     <h2 class="text-3xl md:text-4xl text-center font-bold mb-4">
-      Was uns einzigartig macht
+      Was prüfen wir?
     </h2>
 
     <h3 class="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
-      Ein Website-Check ist mehr als ein schneller Blick auf Design oder Keywords. Wir analysieren Ihre Seite ganzheitlich - datenbasiert, strukturiert und mit einem klaren Fokus auf echte Performance.
+      Jede Website ist anders. Deshalb ist auch unsere Analyse individuell. Statt automatisierter Reports erhalten Sie konkrete, priorisierte Empfehlungen von erfahrenen Marketing-Experten.
     </h3>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
