@@ -121,8 +121,7 @@ const plans: PlanProps[] = [
           <CardDescription class="pb-4">{{ description }}</CardDescription>
 
           <div>
-            <span class="text-muted-foreground">ab </span>
-            <span class="text-3xl font-bold">${{ price }}</span>
+            <span class="text-3xl font-bold">{{ price }}.00 €</span>
           </div>
         </CardHeader>
 
