@@ -7,6 +7,7 @@ interface HowItWorksProps {
   title: string;
   description: string;
   image: string;
+  glowColor: string;
 }
 
 const HowItWorksList: HowItWorksProps[] = [
@@ -16,6 +17,7 @@ const HowItWorksList: HowItWorksProps[] = [
     description:
       "Sie senden uns Ihre Website-URL und ein paar Angaben zu Ihrem Unternehmen - der Check ist für Sie unverbindlich.",
     image: "max-1.svg",
+    glowColor: "#EE720326" ,
   },
   {
     badgeTitle: "Analyse",
@@ -23,20 +25,23 @@ const HowItWorksList: HowItWorksProps[] = [
     description:
       "Unsere Marketing-Experten prüfen Ihre Website manuell anhand definierter Kriterien - keine automatisierten Tool-Reports.",
     image: "max-2.svg",
+    glowColor: "#1873AA26",
   },
   {
     badgeTitle: "Insights",
     title: "Strukturierte Auswertung",
     description:
       "Die Auswertung erfolgt persönlich - entweder in einem Online-Termin oder vor Ort. Gemeinsam gehen wir die Ergebnisse durch und beantworten Ihre Fragen.",
-    image: "pacheco.png",
+    image: "max-3.svg",
+    glowColor: "#B31EB126" ,
   },
   {
     badgeTitle: "Umsetzung",
     title: "Optimierungen gezielt realisieren",
     description:
       "Auf Wunsch unterstützen wir Sie oder Ihr Team bei der Umsetzung - von schnellen Anpassungen bis zur umfassenden Optimierung.",
-    image: "gamestation.png",
+    image: "max-4.svg",
+    glowColor: "#6AAF1826" ,
   },
 ];
 </script>
@@ -59,7 +64,7 @@ const HowItWorksList: HowItWorksProps[] = [
     <div class="lg:w-[80%] mx-auto relative">
       <div
         v-for="(
-          { badgeTitle, title, description, image }, index
+          { badgeTitle, title, description, image, glowColor }, index
         ) in HowItWorksList"
         :key="title"
         :class="[
@@ -86,15 +91,16 @@ const HowItWorksList: HowItWorksProps[] = [
         <img
           :src="image"
           :alt="`Image describing ${title} `"
-          class="w-[150px] md:w-[150px] lg:w-[300px] mx-auto p-12"
+          class="h-[150px] md:h-[150px] lg:h-[300px] mx-auto p-16"
         />
         <div
           :class="[
-            '-z-10 absolute right-0 w-44 h-72  lg:w-64 lg:h-80 rounded-full bg-primary/15 dark:bg-primary/10 blur-3xl',
+            '-z-10 absolute right-0 w-44 h-72  lg:w-64 lg:h-80 rounded-full blur-3xl',
             {
               'left-0': index % 2 !== 0,
             },
           ]"
+          :style="{ backgroundColor: glowColor }"
         ></div>
       </div>
     </div>
