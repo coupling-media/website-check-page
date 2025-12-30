@@ -27,6 +27,7 @@ interface PlanProps {
 }
 
 const plans: PlanProps[] = [
+  /*
   {
     title: "SEO und SEA Optimierung",
     popular: 0,
@@ -43,6 +44,7 @@ const plans: PlanProps[] = [
       "Individueller Maßnahmenplan"
     ],
   },
+  */
   {
     title: "Kostenloser Website-Check",
     popular: 1,
@@ -58,7 +60,7 @@ const plans: PlanProps[] = [
       "Auffällige optische & strukturelle Fehler",
       "Kurzreport mit Prioritäten"
     ],
-  },
+  } /*,
   {
     title: "Komplette Web-Optimierung",
     popular: 0,
@@ -74,7 +76,8 @@ const plans: PlanProps[] = [
       "SEO + SEA + Tracking-Optimierung",
       "Individuelle Strategie inkl. Roadmap & Workshop"
     ],
-  },
+  }, 
+  */
 ];
 </script>
 
@@ -94,7 +97,7 @@ const plans: PlanProps[] = [
       Damit Sie genau das bekommen was Ihr Unternehmen benötigt.
     </h3>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-4">
+    <div class="flex items-center justify-center">
       <Card
         v-for="{
           title,
