@@ -8,6 +8,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-vue-next";
 import SignupOverlay from "@/components/SignupOverlay.vue"
 
+import { SquareArrowOutUpRight } from 'lucide-vue-next';
+
 const showSignup = ref(false)
 </script>
 
@@ -31,12 +33,12 @@ const showSignup = ref(false)
           class="max-w-screen-md mx-auto text-center text-5xl md:text-6xl font-bold"
         >
           <h1>
-            Entdecken Sie das volle
+            Was Google über Ihre
             <span
               class="text-transparent bg-gradient-to-b from-primary to-[#FFA14D] bg-clip-text"
-              >Potenzial
+              > Website
             </span>
-            Ihrer Internetseite.
+            denkt
           </h1>
         </div>
 
@@ -63,10 +65,12 @@ const showSignup = ref(false)
             variant="secondary"
             class="w-5/6 md:w-1/4 font-bold"
           >
-            <a
+            <a class="inline-flex items-center gap-3"
               href="https://coupling.media/"
               target="_blank"
-              >Wer sind wir?</a
+              >coupling media
+              <SquareArrowOutUpRight class="h-4 w-4" />
+              </a
             >
           </Button>
         </div>

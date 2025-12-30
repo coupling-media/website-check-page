@@ -15,20 +15,20 @@ const HowItWorksList: HowItWorksProps[] = [
     title: "Website kostenlos anmelden",
     description:
       "Sie senden uns Ihre Website-URL und ein paar Angaben zu Ihrem Unternehmen - der Check ist für Sie unverbindlich.",
-    image: "roboto.png",
+    image: "max-1.svg",
   },
   {
     badgeTitle: "Analyse",
     title: "Technik, SEO & UX prüfen",
     description:
-      "Wir analysieren Performance, technische SEO, Inhalte und Nutzerführung und decken versteckte Bremsen Ihrer Website auf.",
-    image: "runner.png",
+      "Unsere Marketing-Experten prüfen Ihre Website manuell anhand definierter Kriterien - keine automatisierten Tool-Reports.",
+    image: "max-2.svg",
   },
   {
     badgeTitle: "Insights",
-    title: "Ergebnisse transparent auswerten",
+    title: "Strukturierte Auswertung",
     description:
-      "Sie erhalten einen klar strukturierten Report mit Prioritäten, Quick-Wins und klaren Handlungsempfehlungen.",
+      "Die Auswertung erfolgt persönlich - entweder in einem Online-Termin oder vor Ort. Gemeinsam gehen wir die Ergebnisse durch und beantworten Ihre Fragen.",
     image: "pacheco.png",
   },
   {
@@ -86,7 +86,7 @@ const HowItWorksList: HowItWorksProps[] = [
         <img
           :src="image"
           :alt="`Image describing ${title} `"
-          className="w-[150px]  md:w-[250px] lg:w-[300px] mx-auto -scale-x-100 "
+          class="w-[150px] md:w-[150px] lg:w-[300px] mx-auto p-12"
         />
         <div
           :class="[
