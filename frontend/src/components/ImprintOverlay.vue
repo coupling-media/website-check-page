@@ -1,5 +1,7 @@
 <script setup lang="ts">
 const emit = defineEmits(["close"]);
+import { X } from "lucide-vue-next";
+
 </script>
 
 <template>
@@ -13,10 +15,10 @@ const emit = defineEmits(["close"]);
       <!-- Close -->
       <button
         @click="emit('close')"
-        class="absolute top-3 right-6 text-muted-foreground hover:text-foreground text-xl"
+        class="absolute top-3 right-3 text-muted-foreground hover:text-foreground text-xl"
         aria-label="Schließen"
       >
-        x
+        <X class="w-4 h-4"/>
       </button>
 
         <h1 class="text-2xl font-bold mb-6">Impressum</h1>

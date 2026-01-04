@@ -2,6 +2,7 @@
 import { ref } from "vue";
 import { userService } from "@/api/userService";
 import type { User } from "@/types/User";
+import { X } from "lucide-vue-next";
 
 const emit = defineEmits(["close"]);
 
@@ -59,7 +60,7 @@ async function handleSubmit() {
           @click="emit('close')"
           class="absolute top-3 right-3 text-muted-foreground hover:text-foreground"
       >
-        ×
+        <X class="w-4 h-4"/>
       </button>
 
       <h2 class="text-2xl font-bold mb-6">Anmeldung</h2>
