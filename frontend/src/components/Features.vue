@@ -99,7 +99,7 @@ const iconMap: Record<
 
 <template>
   <section
-    id="features"
+    id="analysis"
     class="container py-24 sm:py-32"
   >
     <h2 class="text-lg text-primary text-center mb-2 tracking-wider">

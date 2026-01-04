@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { ChevronsDown } from "lucide-vue-next";
 import Separator from "./ui/separator/Separator.vue";
+import MainLogo from "@/components/ui/navigation-menu/MainLogo.vue";
+
 </script>
 
 <template>
@@ -13,16 +14,7 @@ import Separator from "./ui/separator/Separator.vue";
         class="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8"
       >
         <div class="col-span-full xl:col-span-2">
-          <a
-            href="#"
-            class="flex font-bold items-center"
-          >
-            <ChevronsDown
-              class="bg-gradient-to-tr from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white"
-            />
-
-            <h3 class="text-2xl">Shadcn-Vue</h3>
-          </a>
+            <main-logo></main-logo>
         </div>
 
         <div class="flex flex-col gap-2">

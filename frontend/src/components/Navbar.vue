@@ -38,8 +38,16 @@ interface FeatureProps {
 
 const routeList: RouteProps[] = [
   {
+    href: "#how-it-works",
+    label: "Ablauf",
+  },
+  {
+    href: "#problem",
+    label: "Vorteile",
+  },
+  {
     href: "#testimonials",
-    label: "Testimonials",
+    label: "Kunden",
   },
   {
     href: "#team",
@@ -47,11 +55,7 @@ const routeList: RouteProps[] = [
   },
   {
     href: "#contact",
-    label: "Contact",
-  },
-  {
-    href: "#faq",
-    label: "FAQ",
+    label: "Kontakt",
   },
 ];
 
@@ -130,7 +134,7 @@ const isOpen = ref<boolean>(false);
     <NavigationMenu class="hidden lg:block">
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger class="bg-card text-base">
+          <!--<NavigationMenuTrigger class="bg-card text-base">
             Features
           </NavigationMenuTrigger>
           <NavigationMenuContent>
@@ -155,7 +159,7 @@ const isOpen = ref<boolean>(false);
                 </li>
               </ul>
             </div>
-          </NavigationMenuContent>
+          </NavigationMenuContent>-->
         </NavigationMenuItem>
 
         <NavigationMenuItem>

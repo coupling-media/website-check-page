@@ -16,9 +16,9 @@ import Footer from "./components/Footer.vue";
   <Navbar />
   <Hero />
   <Sponsors />
+  <HowItWorks />
   <Benefits />
   <Features />
-  <HowItWorks />
   <Testimonials />
   <Team />
   <Pricing />

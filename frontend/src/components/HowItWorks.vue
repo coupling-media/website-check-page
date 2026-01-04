@@ -48,12 +48,12 @@ const HowItWorksList: HowItWorksProps[] = [
 
 <template>
   <section
-    id="features"
+    id="how-it-works"
     class="container py-24 sm:py-32"
   >
     <div class="text-center mb-8">
       <h2 class="text-lg text-primary text-center mb-2 tracking-wider">
-        How It Works
+        So einfach geht's
       </h2>
 
       <h2 class="text-3xl md:text-4xl text-center font-bold">

@@ -75,7 +75,7 @@ const iconMap: Record<
 
 <template>
   <section
-    id="benefits"
+    id="problem"
     class="container py-24 sm:py-32"
   >
     <div class="grid lg:grid-cols-2 place-items-center lg:gap-24">

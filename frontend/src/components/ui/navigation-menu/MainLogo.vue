@@ -13,7 +13,7 @@ const logoSrc = computed(() => {
 
 <template>
   <a
-      href="/"
+      href="#"
       class="flex items-center gap-2 select-none"
   >
     <img
