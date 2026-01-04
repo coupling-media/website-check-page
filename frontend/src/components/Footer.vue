@@ -18,13 +18,13 @@ import MainLogo from "@/components/ui/navigation-menu/MainLogo.vue";
         </div>
 
         <div class="flex flex-col gap-2">
-          <h3 class="font-bold text-lg">Contact</h3>
+          <h3 class="font-bold text-lg">Unternehmen</h3>
           <div>
             <a
               href="#"
               class="opacity-60 hover:opacity-100"
             >
-              Github
+              Impressum
             </a>
           </div>
 
@@ -33,7 +33,7 @@ import MainLogo from "@/components/ui/navigation-menu/MainLogo.vue";
               href="#"
               class="opacity-60 hover:opacity-100"
             >
-              Twitter
+              AGB
             </a>
           </div>
 
@@ -42,67 +42,7 @@ import MainLogo from "@/components/ui/navigation-menu/MainLogo.vue";
               href="#"
               class="opacity-60 hover:opacity-100"
             >
-              Instagram
-            </a>
-          </div>
-        </div>
-
-        <div class="flex flex-col gap-2">
-          <h3 class="font-bold text-lg">Platforms</h3>
-          <div>
-            <a
-              href="#"
-              class="opacity-60 hover:opacity-100"
-            >
-              iOS
-            </a>
-          </div>
-
-          <div>
-            <a
-              href="#"
-              class="opacity-60 hover:opacity-100"
-            >
-              Android
-            </a>
-          </div>
-
-          <div>
-            <a
-              href="#"
-              class="opacity-60 hover:opacity-100"
-            >
-              Web
-            </a>
-          </div>
-        </div>
-
-        <div class="flex flex-col gap-2">
-          <h3 class="font-bold text-lg">Help</h3>
-          <div>
-            <a
-              href="#"
-              class="opacity-60 hover:opacity-100"
-            >
-              Contact Us
-            </a>
-          </div>
-
-          <div>
-            <a
-              href="#"
-              class="opacity-60 hover:opacity-100"
-            >
-              FAQ
-            </a>
-          </div>
-
-          <div>
-            <a
-              href="#"
-              class="opacity-60 hover:opacity-100"
-            >
-              Feedback
+              Datenschutz
             </a>
           </div>
         </div>
@@ -114,7 +54,7 @@ import MainLogo from "@/components/ui/navigation-menu/MainLogo.vue";
               href="#"
               class="opacity-60 hover:opacity-100"
             >
-              Twitch
+              Instagram
             </a>
           </div>
 
@@ -123,7 +63,7 @@ import MainLogo from "@/components/ui/navigation-menu/MainLogo.vue";
               href="#"
               class="opacity-60 hover:opacity-100"
             >
-              Discord
+              LinkedIn
             </a>
           </div>
 
@@ -132,7 +72,7 @@ import MainLogo from "@/components/ui/navigation-menu/MainLogo.vue";
               href="#"
               class="opacity-60 hover:opacity-100"
             >
-              Dribbble
+              Website
             </a>
           </div>
         </div>
@@ -141,13 +81,13 @@ import MainLogo from "@/components/ui/navigation-menu/MainLogo.vue";
       <Separator class="my-6" />
       <section className="">
         <h3 class="">
-          &copy; 2024 Designed and developed by
+          &copy;
           <a
             target="_blank"
-            href="https://github.com/leoMirandaa"
+            href="https://coupling.media"
             className="text-primary transition-all border-primary hover:border-b-2"
           >
-            Leo Miranda
+            coupling media GmbH
           </a>
         </h3>
       </section>
