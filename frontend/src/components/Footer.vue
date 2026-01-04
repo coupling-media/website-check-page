@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import { ref } from "vue";
 import Separator from "./ui/separator/Separator.vue";
 import MainLogo from "@/components/ui/navigation-menu/MainLogo.vue";
+import ImprintOverlay from "@/components/ImprintOverlay.vue";
 
+const showImprint = ref(false);
 </script>
 
 <template>
@@ -22,10 +25,15 @@ import MainLogo from "@/components/ui/navigation-menu/MainLogo.vue";
           <div>
             <a
               href="#"
-              class="opacity-60 hover:opacity-100"
+              class="opacity-60 hover:opacity-100 cursor-pointer"
+              @click.prevent="showImprint = true"
             >
               Impressum
             </a>
+            <ImprintOverlay
+              v-if="showImprint"
+              @close="showImprint = false"
+            />
           </div>
 
           <div>
