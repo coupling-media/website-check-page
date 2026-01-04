@@ -7,11 +7,11 @@ mode.value = "dark";
 
 import {
   NavigationMenu,
-  NavigationMenuContent,
+  //NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
+  //NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import {
   Sheet,
@@ -31,10 +31,12 @@ interface RouteProps {
   label: string;
 }
 
+/*
 interface FeatureProps {
   title: string;
   description: string;
 }
+  */
 
 const routeList: RouteProps[] = [
   {
@@ -59,7 +61,7 @@ const routeList: RouteProps[] = [
   },
 ];
 
-const featureList: FeatureProps[] = [
+/*const featureList: FeatureProps[] = [
   {
     title: "Showcase Your Value ",
     description: "Highlight how your product solves user problems.",
@@ -75,6 +77,7 @@ const featureList: FeatureProps[] = [
       "Make your lead capture form visually appealing and strategically.",
   },
 ];
+*/
 
 const isOpen = ref<boolean>(false);
 </script>
