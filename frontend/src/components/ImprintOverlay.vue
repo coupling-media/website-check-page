@@ -19,14 +19,14 @@ const emit = defineEmits(["close"]);
         x
       </button>
 
-        <h2 class="text-2xl font-bold mb-6">Impressum</h2>
+        <h1 class="text-2xl font-bold mb-6">Impressum</h1>
 
         <div class="space-y-6 text-sm leading-relaxed text-left">
 
         <section>
             <p>
             coupling media GmbH<br />
-            Leopoldstr. 2–6<br />
+            Leopoldstr. 2-6<br />
             32051 Herford
             </p>
         </section>

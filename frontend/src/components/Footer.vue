@@ -3,7 +3,9 @@ import { ref } from "vue";
 import Separator from "./ui/separator/Separator.vue";
 import MainLogo from "@/components/ui/navigation-menu/MainLogo.vue";
 import ImprintOverlay from "@/components/ImprintOverlay.vue";
+import PrivacyPolicyOverlay from "./PrivacyPolicyOverlay.vue";
 
+const showPrivacyPolicy = ref(false);
 const showImprint = ref(false);
 </script>
 
@@ -48,10 +50,15 @@ const showImprint = ref(false);
           <div>
             <a
               href="#"
-              class="opacity-60 hover:opacity-100"
+              class="opacity-60 hover:opacity-100 cursor-pointer"
+              @click.prevent="showPrivacyPolicy = true"
             >
               Datenschutz
             </a>
+            <PrivacyPolicyOverlay
+              v-if="showPrivacyPolicy"
+              @close="showPrivacyPolicy = false"
+            />
           </div>
         </div>
 
