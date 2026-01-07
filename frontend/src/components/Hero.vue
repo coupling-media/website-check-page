@@ -1,139 +1,127 @@
 <script setup lang="ts">
-import { ref } from "vue"
+import { ref } from "vue";
 import { useColorMode } from "@vueuse/core";
 const mode = useColorMode();
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-vue-next";
-import SignupOverlay from "@/components/SignupOverlay.vue"
+import SignupOverlay from "@/components/SignupOverlay.vue";
 
-import { SquareArrowOutUpRight } from 'lucide-vue-next';
+import { SquareArrowOutUpRight } from "lucide-vue-next";
 
-const showSignup = ref(false)
+const showSignup = ref(false);
 </script>
 
 <template>
-  <section class="container">
-    <div
-      class="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-20 md:py-32"
-    >
-      <div class="text-center space-y-8 mr-2">
-        <Badge
-          variant="outline"
-          class="text-sm py-2"
-        >
-          <span class="mr-2 text-primary">
-            <Badge>Kostenlos</Badge>
-          </span>
-          <span class="mr-2"> Website-Check </span>
-        </Badge>
+    <section class="container">
+        <div class="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-20 md:py-32">
+            <div class="text-center space-y-8 mr-2">
+                <Badge variant="outline" class="text-sm py-2">
+                    <span class="mr-2 text-primary">
+                        <Badge>Kostenlos</Badge>
+                    </span>
+                    <span class="mr-2"> Website-Check </span>
+                </Badge>
 
-        <div
-          class="max-w-screen-md mx-auto text-center text-5xl md:text-6xl font-bold"
-        >
-          <h1>
-            Was
-            <span
-              class="text-transparent bg-gradient-to-b from-primary to-[#FFA14D] bg-clip-text"
-              > Google & KIs
-            </span>
-            über Ihre Website denken
-          </h1>
+                <div class="max-w-screen-md mx-auto text-center text-5xl md:text-6xl font-bold">
+                    <h1>
+                        Was
+                        <span
+                            class="text-transparent bg-gradient-to-b from-primary to-[#FFA14D] bg-clip-text"
+                        >
+                            Google & KIs
+                        </span>
+                        über Ihre Website denken
+                    </h1>
+                </div>
+
+                <p class="max-w-screen-sm mx-auto text-xl text-muted-foreground">
+                    Wir analysieren Ihre Website und decken auf, wo Sie mehr Sichtbarkeit, mehr
+                    Leads und mehr Umsatz erzielen können.
+                </p>
+
+                <div
+                    class="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 justify-center"
+                >
+                    <Button class="w-5/6 md:w-1/4 font-bold group/arrow" @click="showSignup = true">
+                        Jetzt überprüfen lassen
+                        <ArrowRight
+                            class="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform"
+                        />
+                    </Button>
+
+                    <!-- Overlay anzeigen -->
+                    <SignupOverlay v-if="showSignup" @close="showSignup = false" />
+
+                    <Button as-child variant="secondary" class="w-5/6 md:w-1/4 font-bold">
+                        <a
+                            class="inline-flex items-center gap-3"
+                            href="https://coupling.media/"
+                            target="_blank"
+                            >coupling media
+                            <SquareArrowOutUpRight class="h-4 w-4" />
+                        </a>
+                    </Button>
+                </div>
+            </div>
+
+            <div class="relative group mt-14">
+                <!-- gradient shadow -->
+                <div
+                    class="absolute -top-6 right-12 w-[90%] h-12 lg:h-[80%] bg-primary/50 blur-3xl rounded-full img-shadow-animation"
+                ></div>
+
+                <img
+                    class="w-full md:w-[1200px] mx-auto rounded-lg relative rouded-lg leading-none flex items-center border border-t-2 border-t-primary/30 img-border-animation"
+                    :src="mode == 'light' ? 'sistrix-light-hero.png' : 'sistrix-dark-hero.png'"
+                    alt="dashboard using shadcn-vue"
+                />
+
+                <!-- gradient effect img -->
+                <div
+                    class="absolute bottom-0 left-0 w-full h-20 md:h-28 bg-gradient-to-b from-background/0 via-background/50 to-background rounded-lg"
+                ></div>
+            </div>
         </div>
-
-        <p class="max-w-screen-sm mx-auto text-xl text-muted-foreground">
-          Wir analysieren Ihre Website und decken auf, wo Sie mehr Sichtbarkeit, mehr Leads und mehr Umsatz erzielen können.
-        </p>
-
-        <div class="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 justify-center">
-        <Button
-              class="w-5/6 md:w-1/4 font-bold group/arrow"
-              @click="showSignup = true"
-          >
-            Jetzt überprüfen lassen
-            <ArrowRight
-                class="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform"
-            />
-          </Button>
-
-          <!-- Overlay anzeigen -->
-          <SignupOverlay v-if="showSignup" @close="showSignup = false" />
-
-          <Button
-            as-child
-            variant="secondary"
-            class="w-5/6 md:w-1/4 font-bold"
-          >
-            <a class="inline-flex items-center gap-3"
-              href="https://coupling.media/"
-              target="_blank"
-              >coupling media
-              <SquareArrowOutUpRight class="h-4 w-4" />
-              </a
-            >
-          </Button>
-        </div>
-      </div>
-
-      <div class="relative group mt-14">
-        <!-- gradient shadow -->
-        <div
-          class="absolute -top-6 right-12 w-[90%] h-12 lg:h-[80%] bg-primary/50 blur-3xl rounded-full img-shadow-animation"
-        ></div>
-
-        <img
-          class="w-full md:w-[1200px] mx-auto rounded-lg relative rouded-lg leading-none flex items-center border border-t-2 border-t-primary/30 img-border-animation"
-          :src="
-            mode == 'light' ? 'sistrix-light-hero.png' : 'sistrix-dark-hero.png'
-          "
-          alt="dashboard using shadcn-vue"
-        />
-
-        <!-- gradient effect img -->
-        <div
-          class="absolute bottom-0 left-0 w-full h-20 md:h-28 bg-gradient-to-b from-background/0 via-background/50 to-background rounded-lg"
-        ></div>
-      </div>
-    </div>
-  </section>
+    </section>
 </template>
 
 <style scoped>
 .img-shadow-animation {
-  animation-name: img-shadow-animation;
-  animation-iteration-count: infinite;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-direction: alternate;
+    animation-name: img-shadow-animation;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
 }
 
 .img-border-animation {
-  animation-name: img-border-animation;
-  animation-iteration-count: infinite;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-direction: alternate;
+    animation-name: img-border-animation;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
 }
 
 @keyframes img-shadow-animation {
-  from {
-    opacity: 0.5;
-    transform: translateY(30px);
-  }
+    from {
+        opacity: 0.5;
+        transform: translateY(30px);
+    }
 
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 @keyframes img-border-animation {
-  from {
-    @apply border-t-primary/10;
-  }
+    from {
+        @apply border-t-primary/10;
+    }
 
-  to {
-    @apply border-t-primary/60;
-  }
+    to {
+        @apply border-t-primary/60;
+    }
 }
 </style>

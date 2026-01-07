@@ -1,36 +1,36 @@
 <script setup lang="ts">
 import { Button } from "@/components/ui/button";
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
 } from "@/components/ui/card";
-import SignupOverlay from "@/components/SignupOverlay.vue"
+import SignupOverlay from "@/components/SignupOverlay.vue";
 import { Check } from "lucide-vue-next";
 import { Badge } from "@/components/ui/badge";
 import { ref } from "vue";
 
-const showSignup = ref(false)
+const showSignup = ref(false);
 
 enum PopularPlan {
-  NO = 0,
-  YES = 1,
+    NO = 0,
+    YES = 1,
 }
 
 interface PlanProps {
-  title: string;
-  popular: PopularPlan;
-  price: number;
-  description: string;
-  buttonText: string;
-  benefitList: string[];
+    title: string;
+    popular: PopularPlan;
+    price: number;
+    description: string;
+    buttonText: string;
+    benefitList: string[];
 }
 
 const plans: PlanProps[] = [
-  /*
+    /*
   {
     title: "SEO und SEA Optimierung",
     popular: 0,
@@ -48,22 +48,22 @@ const plans: PlanProps[] = [
     ],
   },
   */
-  {
-    title: "Kostenloser Website-Check",
-    popular: 1,
-    price: 0,
-    description:
-        "Erhalten Sie einen schnellen, transparenten Überblick über den Status Ihrer Website.",
-    buttonText: "Jetzt kostenlos überprüfen lassen",
-    benefitList: [
-    "Sichtbarkeitsanalyse (SEO- & GEO-Grundwerte)",
-      "Erste SEA-Potentialeinschätzung",
-      "UX & Design-Check",
-      "Barrierefreiheits-Bewertung",
-      "Auffällige optische & strukturelle Fehler",
-      "Kurzreport mit Prioritäten"
-    ],
-  } /*,
+    {
+        title: "Kostenloser Website-Check",
+        popular: 1,
+        price: 0,
+        description:
+            "Erhalten Sie einen schnellen, transparenten Überblick über den Status Ihrer Website.",
+        buttonText: "Jetzt kostenlos überprüfen lassen",
+        benefitList: [
+            "Sichtbarkeitsanalyse (SEO- & GEO-Grundwerte)",
+            "Erste SEA-Potentialeinschätzung",
+            "UX & Design-Check",
+            "Barrierefreiheits-Bewertung",
+            "Auffällige optische & strukturelle Fehler",
+            "Kurzreport mit Prioritäten",
+        ],
+    } /*,
   {
     title: "Komplette Web-Optimierung",
     popular: 0,
@@ -80,85 +80,70 @@ const plans: PlanProps[] = [
       "Individuelle Strategie inkl. Roadmap & Workshop"
     ],
   }, 
-  */
+  */,
 ];
 </script>
 
 <template>
-  <section class="container py-24 sm:py-32">
-    <h2 class="text-lg text-primary text-center mb-2 tracking-wider">
-      Pricing
-    </h2>
+    <section class="container py-24 sm:py-32">
+        <h2 class="text-lg text-primary text-center mb-2 tracking-wider">Pricing</h2>
 
-    <h2 class="text-3xl md:text-4xl text-center font-bold mb-4">
-      Für jeden die richtige Lösung
-    </h2>
+        <h2 class="text-3xl md:text-4xl text-center font-bold mb-4">
+            Für jeden die richtige Lösung
+        </h2>
 
-    <h3
-      class="md:w-1/2 mx-auto text-xl text-center text-muted-foreground pb-14"
-    >
-      Damit Sie genau das bekommen was Ihr Unternehmen benötigt.
-    </h3>
+        <h3 class="md:w-1/2 mx-auto text-xl text-center text-muted-foreground pb-14">
+            Damit Sie genau das bekommen was Ihr Unternehmen benötigt.
+        </h3>
 
-    <div class="flex items-center justify-center">
-      <Card
-        v-for="{
-          title,
-          popular,
-          price,
-          description,
-          buttonText,
-          benefitList,
-        } in plans"
-        :key="title"
-        :class="{
-          'drop-shadow-xl shadow-black/10 dark:shadow-white/10 border-[1.5px] border-primary lg:scale-[1.1]':
-            popular === PopularPlan?.YES,
-        }"
-      >
-        <CardHeader>
-          <CardTitle class="pb-2">
-            {{ title }}
-          </CardTitle>
-
-          <CardDescription class="pb-4">{{ description }}</CardDescription>
-
-          <div>
-            <span class="text-3xl font-bold">{{ price }}.00 €</span>
-          </div>
-        </CardHeader>
-
-        <CardContent class="flex">
-          <div class="space-y-4">
-            <span
-              v-for="benefit in benefitList"
-              :key="benefit"
-              class="flex"
+        <div class="flex items-center justify-center">
+            <Card
+                v-for="{ title, popular, price, description, buttonText, benefitList } in plans"
+                :key="title"
+                :class="{
+                    'drop-shadow-xl shadow-black/10 dark:shadow-white/10 border-[1.5px] border-primary lg:scale-[1.1]':
+                        popular === PopularPlan?.YES,
+                }"
             >
-              <Check class="text-primary mr-2" />
-              <h3>{{ benefit }}</h3>
-            </span>
-          </div>
-        </CardContent>
+                <CardHeader>
+                    <CardTitle class="pb-2">
+                        {{ title }}
+                    </CardTitle>
 
-        <CardFooter>
-          <Button
-            :variant="popular === PopularPlan?.NO ? 'secondary' : 'default'"
-            class="w-full"
-            @click="showSignup = true"
-          >
-            {{ buttonText }}
-          </Button>
-        </CardFooter>
-        
-        <Badge
-            v-if="popular === PopularPlan.YES"
-            variant="secondary"
-            class="absolute -top-2 -right-3"
-        >Meistgebucht</Badge
-        >
-      </Card>
-      <SignupOverlay v-if="showSignup" @close="showSignup = false" />
-    </div>
-  </section>
+                    <CardDescription class="pb-4">{{ description }}</CardDescription>
+
+                    <div>
+                        <span class="text-3xl font-bold">{{ price }}.00 €</span>
+                    </div>
+                </CardHeader>
+
+                <CardContent class="flex">
+                    <div class="space-y-4">
+                        <span v-for="benefit in benefitList" :key="benefit" class="flex">
+                            <Check class="text-primary mr-2" />
+                            <h3>{{ benefit }}</h3>
+                        </span>
+                    </div>
+                </CardContent>
+
+                <CardFooter>
+                    <Button
+                        :variant="popular === PopularPlan?.NO ? 'secondary' : 'default'"
+                        class="w-full"
+                        @click="showSignup = true"
+                    >
+                        {{ buttonText }}
+                    </Button>
+                </CardFooter>
+
+                <Badge
+                    v-if="popular === PopularPlan.YES"
+                    variant="secondary"
+                    class="absolute -top-2 -right-3"
+                    >Meistgebucht</Badge
+                >
+            </Card>
+            <SignupOverlay v-if="showSignup" @close="showSignup = false" />
+        </div>
+    </section>
 </template>

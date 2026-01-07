@@ -6,15 +6,15 @@ import tailwind from "tailwindcss";
 import autoprefixer from "autoprefixer";
 
 export default defineConfig({
-  css: {
-    postcss: {
-      plugins: [tailwind(), autoprefixer()],
+    css: {
+        postcss: {
+            plugins: [tailwind(), autoprefixer()],
+        },
     },
-  },
-  plugins: [vue()],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
+    plugins: [vue()],
+    resolve: {
+        alias: {
+            "@": path.resolve(__dirname, "./src"),
+        },
     },
-  },
 });

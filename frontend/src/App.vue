@@ -13,15 +13,15 @@ import CTA from "./components/CTA.vue";
 </script>
 
 <template>
-  <Navbar />
-  <Hero />
-  <Sponsors />
-  <HowItWorks />
-  <Benefits />
-  <Features />
-  <CTA />
-  <Testimonials />
-  <Team />
-  <Pricing />
-  <Footer />
+    <Navbar />
+    <Hero />
+    <Sponsors />
+    <HowItWorks />
+    <Benefits />
+    <Features />
+    <CTA />
+    <Testimonials />
+    <Team />
+    <Pricing />
+    <Footer />
 </template>
