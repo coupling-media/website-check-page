@@ -15,7 +15,8 @@ import {
   CodeXml,
   FilePenLine,
   Proportions,
-  Search
+  Search,
+  BrainCircuit
 } from "lucide-vue-next";
 
 interface FeaturesProps {
@@ -26,8 +27,8 @@ interface FeaturesProps {
 
 const featureList: FeaturesProps[] = [
   {
-    icon: "wrench",
-    title: "Technische SEO-Grundlagen",
+    icon: "search",
+    title: "Sichtbarkeit & SEO-Status",
     description:
       "Wir prüfen, ob Ihre Website für Suchmaschinen technisch sauber erreichbar und indexierbar ist.",
   },
@@ -56,10 +57,10 @@ const featureList: FeaturesProps[] = [
       "Analyse, wie intuitiv Nutzer durch die Website geführt werden.",
   },
   {
-    icon: "search",
-    title: "Sichtbarkeit & Grund-SEO-Status",
+    icon: "brainCircuit",
+    title: "LLM und GEO-Check",
     description:
-      "Einordnung des aktuellen SEO-Status auf Basis von SISTRIX-Daten.",
+      "Wir prüfen, wie gut Ihre Website für KI-Systeme optimiert ist und ob Inhalte nach GEO strukturiert sind.",
   },
 ];
 
@@ -79,6 +80,7 @@ const iconMap: Record<
   | typeof FilePenLine
   | typeof Proportions
   | typeof Search
+  | typeof BrainCircuit
 > = {
   tabletSmartphone: TabletSmartphone,
   badgeCheck: BadgeCheck,
@@ -93,7 +95,8 @@ const iconMap: Record<
   codeXml: CodeXml,
   filePenLine: FilePenLine,
   proportions: Proportions,
-  search: Search
+  search: Search,
+  brainCircuit: BrainCircuit
 };
 </script>
 

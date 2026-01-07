@@ -33,12 +33,12 @@ const showSignup = ref(false)
           class="max-w-screen-md mx-auto text-center text-5xl md:text-6xl font-bold"
         >
           <h1>
-            Was Google über Ihre
+            Was
             <span
               class="text-transparent bg-gradient-to-b from-primary to-[#FFA14D] bg-clip-text"
-              > Website
+              > Google & KIs
             </span>
-            denkt
+            über Ihre Website denken
           </h1>
         </div>
 

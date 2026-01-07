@@ -8,9 +8,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-
+import SignupOverlay from "@/components/SignupOverlay.vue"
 import { Check } from "lucide-vue-next";
-import {Badge} from "@/components/ui/badge";
+import { Badge } from "@/components/ui/badge";
+import { ref } from "vue";
+
+const showSignup = ref(false)
 
 enum PopularPlan {
   NO = 0,
@@ -53,7 +56,7 @@ const plans: PlanProps[] = [
         "Erhalten Sie einen schnellen, transparenten Überblick über den Status Ihrer Website.",
     buttonText: "Jetzt kostenlos überprüfen lassen",
     benefitList: [
-    "Sichtbarkeitsanalyse (SEO-Grundwerte)",
+    "Sichtbarkeitsanalyse (SEO- & GEO-Grundwerte)",
       "Erste SEA-Potentialeinschätzung",
       "UX & Design-Check",
       "Barrierefreiheits-Bewertung",
@@ -142,10 +145,12 @@ const plans: PlanProps[] = [
           <Button
             :variant="popular === PopularPlan?.NO ? 'secondary' : 'default'"
             class="w-full"
+            @click="showSignup = true"
           >
             {{ buttonText }}
           </Button>
         </CardFooter>
+        
         <Badge
             v-if="popular === PopularPlan.YES"
             variant="secondary"
@@ -153,6 +158,7 @@ const plans: PlanProps[] = [
         >Meistgebucht</Badge
         >
       </Card>
+      <SignupOverlay v-if="showSignup" @close="showSignup = false" />
     </div>
   </section>
 </template>

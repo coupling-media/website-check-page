@@ -41,15 +41,6 @@ const showImprint = ref(false);
           <div>
             <a
               href="#"
-              class="opacity-60 hover:opacity-100"
-            >
-              AGB
-            </a>
-          </div>
-
-          <div>
-            <a
-              href="#"
               class="opacity-60 hover:opacity-100 cursor-pointer"
               @click.prevent="showPrivacyPolicy = true"
             >
@@ -66,7 +57,7 @@ const showImprint = ref(false);
           <h3 class="font-bold text-lg">Socials</h3>
           <div>
             <a
-              href="#"
+              href="https://www.instagram.com/coupling.media/"
               class="opacity-60 hover:opacity-100"
             >
               Instagram
@@ -75,7 +66,7 @@ const showImprint = ref(false);
 
           <div>
             <a
-              href="#"
+              href="https://www.linkedin.com/company/couplingmedia/"
               class="opacity-60 hover:opacity-100"
             >
               LinkedIn
@@ -84,7 +75,7 @@ const showImprint = ref(false);
 
           <div>
             <a
-              href="#"
+              href="https://coupling.media"
               class="opacity-60 hover:opacity-100"
             >
               Website

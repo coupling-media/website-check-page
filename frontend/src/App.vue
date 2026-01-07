@@ -8,8 +8,8 @@ import Sponsors from "./components/Sponsors.vue";
 import Testimonials from "./components/Testimonials.vue";
 import Team from "./components/Team.vue";
 import Pricing from "./components/Pricing.vue";
-import Contact from "./components/Contact.vue";
 import Footer from "./components/Footer.vue";
+import CTA from "./components/CTA.vue";
 </script>
 
 <template>
@@ -19,9 +19,9 @@ import Footer from "./components/Footer.vue";
   <HowItWorks />
   <Benefits />
   <Features />
+  <CTA />
   <Testimonials />
   <Team />
   <Pricing />
-  <Contact />
   <Footer />
 </template>

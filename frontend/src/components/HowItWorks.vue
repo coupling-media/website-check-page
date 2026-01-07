@@ -1,6 +1,13 @@
 <script setup lang="ts">
+import { ref } from "vue"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import SignupOverlay from "@/components/SignupOverlay.vue"
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-vue-next";
+import CardButton from "./ui/card/CardButton.vue";
+
+const showSignup = ref(false)
 
 interface HowItWorksProps {
   badgeTitle: string;
@@ -8,6 +15,7 @@ interface HowItWorksProps {
   description: string;
   image: string;
   glowColor: string;
+  ctaButton: Boolean;
 }
 
 const HowItWorksList: HowItWorksProps[] = [
@@ -18,6 +26,7 @@ const HowItWorksList: HowItWorksProps[] = [
       "Sie senden uns Ihre Website-URL und ein paar Angaben zu Ihrem Unternehmen - der Check ist für Sie unverbindlich.",
     image: "max-1.svg",
     glowColor: "#EE720326" ,
+    ctaButton: true,
   },
   {
     badgeTitle: "Analyse",
@@ -26,6 +35,7 @@ const HowItWorksList: HowItWorksProps[] = [
       "Unsere Marketing-Experten prüfen Ihre Website manuell anhand definierter Kriterien - keine automatisierten Tool-Reports.",
     image: "max-2.svg",
     glowColor: "#1873AA26",
+    ctaButton: false,
   },
   {
     badgeTitle: "Insights",
@@ -34,6 +44,7 @@ const HowItWorksList: HowItWorksProps[] = [
       "Die Auswertung erfolgt persönlich - entweder in einem Online-Termin oder vor Ort. Gemeinsam gehen wir die Ergebnisse durch und beantworten Ihre Fragen.",
     image: "max-3.svg",
     glowColor: "#B31EB126" ,
+    ctaButton: false,
   },
   {
     badgeTitle: "Umsetzung",
@@ -41,7 +52,8 @@ const HowItWorksList: HowItWorksProps[] = [
     description:
       "Auf Wunsch unterstützen wir Sie oder Ihr Team bei der Umsetzung - von schnellen Anpassungen bis zur umfassenden Optimierung.",
     image: "max-4.svg",
-    glowColor: "#6AAF1826" ,
+    glowColor: "#6AAF1826",
+    ctaButton: false,
   },
 ];
 </script>
@@ -64,7 +76,7 @@ const HowItWorksList: HowItWorksProps[] = [
     <div class="lg:w-[80%] mx-auto relative">
       <div
         v-for="(
-          { badgeTitle, title, description, image, glowColor }, index
+          { badgeTitle, title, description, image, glowColor, ctaButton }, index
         ) in HowItWorksList"
         :key="title"
         :class="[
@@ -86,6 +98,22 @@ const HowItWorksList: HowItWorksProps[] = [
           <CardContent class="text-muted-foreground w-[80%]">
             {{ description }}
           </CardContent>
+          
+          <CardButton>
+            <Button
+                v-if="ctaButton"
+                class="w-5/6 md:w-1/4 font-bold group/arrow"
+                @click="showSignup = true"
+            >
+              Jetzt anmelden
+              <ArrowRight
+                  class="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform"
+              />
+            </Button>
+          </CardButton>
+
+          <!-- Overlay anzeigen -->
+          <SignupOverlay v-if="showSignup" @close="showSignup = false" />
         </Card>
 
         <img
