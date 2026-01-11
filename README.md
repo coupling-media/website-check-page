@@ -31,39 +31,3 @@ npm install
 ```bash
 npm run dev
 ```
-
-
-## Installation & Setup (Maven/Spring Boot Backend)
-
-Dieses Projekt verwendet **Maven** als Build- und Dependency-Management-Tool.  
-Alle benötigten Abhängigkeiten werden automatisch anhand der [`pom.xml`](./pom.xml) installiert.
-
-### Voraussetzungen
-- **[Java 21+](https://www.oracle.com/de/java/technologies/downloads/)**
-- **[Maven 3.9+](https://maven.apache.org/install.html)**
-- Internetzugang (für den ersten Download der Dependencies)
-
----
-
-### Projekt bauen & starten
-
-#### 1. In den Backend-Ordner wechseln
-```bash
-cd backend
-```
-
-#### 2. Alle Dependencies aus der pom.xml herunterladen und Projekt bauen
-```bash
-mvn clean install
-```
-
-#### 3. Anwendung starten
-```bash
-mvn spring-boot:run
-```
-
-#### 4. H2 Entwicklungs-Datenbank aufrufen
-http://localhost:8080/h2-console/login.do
-
-#### 5. SwaggerUI API Dokumentation aufrufen
-http://localhost:8080/swagger-ui/index.html
