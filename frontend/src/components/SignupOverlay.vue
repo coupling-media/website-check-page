@@ -9,6 +9,8 @@ const emit = defineEmits(["close"]);
 const user = ref<User>({
     firstName: "",
     lastName: "",
+    companyName: "",
+    webLink: "",
     email: "",
     phone: "",
     street: "",
@@ -33,6 +35,8 @@ async function handleSubmit() {
         user.value = {
             firstName: "",
             lastName: "",
+            companyName: "",
+            webLink: "",
             email: "",
             phone: "",
             street: "",
@@ -87,6 +91,28 @@ async function handleSubmit() {
                             class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                         />
                     </div>
+
+                    <!-- Firmenname -->
+                    <div class="flex-1">
+                        <label class="text-sm font-medium block text-left">Firmenname *</label>
+                        <input
+                            v-model="user.companyName"
+                            required
+                            class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                        />
+                    </div>
+                </div>
+
+                <!-- Web Link -->
+                <div>
+                    <label class="text-sm font-medium block text-left">Website-URL *</label>
+                    <input
+                        v-model="user.webLink"
+                        type="url"
+                        placeholder="ihre-website.de"
+                        required
+                        class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    />
                 </div>
 
                 <!-- Email -->
