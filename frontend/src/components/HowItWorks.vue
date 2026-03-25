@@ -74,24 +74,27 @@ const HowItWorksList: HowItWorksProps[] = [
                     { badgeTitle, title, description, image, glowColor, ctaButton }, index
                 ) in HowItWorksList"
                 :key="title"
-                :class="['flex mb-8 items-center', { ' flex-row-reverse': index % 2 !== 0 }]"
+                :class="[
+                    'flex flex-col lg:flex-row mb-8 items-center',
+                    { 'lg:flex-row-reverse': index % 2 !== 0 }
+                    ]"
             >
                 <Card class="h-full bg-transparent border-0 shadow-none">
-                    <CardHeader>
+                    <CardHeader class="text-center lg:text-left">
                         <div class="pb-4">
                             <Badge>{{ badgeTitle }}</Badge>
                         </div>
 
-                        <CardTitle>
+                        <CardTitle class="text-center lg:text-left">
                             {{ title }}
                         </CardTitle>
                     </CardHeader>
 
-                    <CardContent class="text-muted-foreground w-[80%]">
+                    <CardContent class="text-muted-foreground w-[80%] text-center lg:text-left mx-auto lg:mx-0">
                         {{ description }}
                     </CardContent>
 
-                    <CardButton>
+                    <CardButton class="flex justify-center lg:justify-start">
                         <Button
                             v-if="ctaButton"
                             class="w-5/6 md:w-1/4 font-bold group/arrow"
@@ -111,7 +114,7 @@ const HowItWorksList: HowItWorksProps[] = [
                 <img
                     :src="image"
                     :alt="`Image describing ${title} `"
-                    class="h-[150px] md:h-[150px] lg:h-[300px] mx-auto p-16"
+                    class="h-[180px] lg:h-[240px] w-auto flex-none mx-auto mt-6 lg:mt-0"
                 />
                 <div
                     :class="[

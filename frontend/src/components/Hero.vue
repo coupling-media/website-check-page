@@ -42,7 +42,7 @@ const showSignup = ref(false);
                 </p>
 
                 <div
-                    class="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 justify-center"
+                    class="flex flex-col md:flex-row items-center md:items-center gap-4 justify-center"
                 >
                     <Button class="w-5/6 md:w-1/4 font-bold group/arrow" @click="showSignup = true">
                         Jetzt überprüfen lassen
